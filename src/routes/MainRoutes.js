@@ -1,16 +1,16 @@
 import { Navigate } from "react-router-dom";
 import Airdrop from "../pages/airdrop";
 import Earn from "../pages/earn";
-import Exchange from "../pages/exchange";
+import Home from "../pages/home";
 import Friends from "../pages/friends";
-import Mine from "../pages/mine";
+import Mine from "../pages/earncash";
 
 const MainRoutes = {
   path: "/",
   children: [
     {
         path : "/",
-        element : <Exchange />
+        element : <Home />
     },
     {
         path:"/exchange",
