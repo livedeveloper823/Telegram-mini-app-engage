@@ -1,14 +1,14 @@
 import Navbar from "../components/Navbar";
 
-const Airdrop = () => {
+const Shop = () => {
   return (
     <div>
       <div className="h-[90vh] w-[100vw]">
-        <div>This is the Airdrop Page.</div>
+        <div>This is the Shop Page.</div>
       </div>
       <Navbar />
     </div>
   );
 };
 
-export default Airdrop;
+export default Shop;

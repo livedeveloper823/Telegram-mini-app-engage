@@ -1,9 +1,9 @@
 import { Navigate } from "react-router-dom";
-import Airdrop from "../pages/airdrop";
-import Earn from "../pages/earn";
 import Home from "../pages/home";
 import Friends from "../pages/friends";
-import Mine from "../pages/earncash";
+import Shop from "../pages/shop";
+import EarnCash from "../pages/earncash";
+import Wallet from "../pages/wallet";
 
 const MainRoutes = {
   path: "/",
@@ -13,24 +13,24 @@ const MainRoutes = {
         element : <Home />
     },
     {
-        path:"/exchange",
+        path:"/home",
         element: <Navigate to = "/"/>
     },
     {
-        path : "/mine",
-        element : <Mine />
+        path : "/earncash",
+        element : <EarnCash />
+    },
+    {
+        path : "/shop",
+        element : <Shop />
     },
     {
         path : "/friends",
         element : <Friends />
     },
     {
-        path : "/earn",
-        element : <Earn />
-    },
-    {
-        path : "/airdrop",
-        element : <Airdrop />
+        path : "/wallet",
+        element : <Wallet />
     },
   ],
 };
