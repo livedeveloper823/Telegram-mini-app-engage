@@ -1,4 +1,4 @@
-import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 
 const Mine = () => {
   return (
@@ -22,7 +22,7 @@ const Mine = () => {
         </div>
         <div>This is the Mine Page.</div>
       </div>
-      <Footer />
+      <Navbar />
     </div>
   );
 };

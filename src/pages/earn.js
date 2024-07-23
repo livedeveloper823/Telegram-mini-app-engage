@@ -1,4 +1,4 @@
-import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 
 const Earn = () => {
   return (
@@ -6,7 +6,7 @@ const Earn = () => {
       <div className="h-[90vh] w-[100vw]">
         <div>This is the Earn Page.</div>
       </div>
-      <Footer />
+      <Navbar />
     </div>
   );
 };
