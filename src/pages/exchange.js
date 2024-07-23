@@ -1,4 +1,4 @@
-import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 import coin from '../assets/dollar.png'
 
 const Exchange = () => {
@@ -27,7 +27,7 @@ const Exchange = () => {
           <button className="bg-blue-600 text-white text-xl fonr-bold px-4 py-2 rounded-lg">Start mining</button>
         </div>
       </div>
-      <Footer />
+      <Navbar />
     </div>
   );
 };

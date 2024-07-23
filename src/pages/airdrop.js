@@ -1,4 +1,4 @@
-import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 
 const Airdrop = () => {
   return (
@@ -6,7 +6,7 @@ const Airdrop = () => {
       <div className="h-[90vh] w-[100vw]">
         <div>This is the Airdrop Page.</div>
       </div>
-      <Footer />
+      <Navbar />
     </div>
   );
 };
