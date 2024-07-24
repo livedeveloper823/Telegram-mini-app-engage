@@ -4,8 +4,12 @@ const EarnCash = () => {
   return (
     <div>
       <div className="h-[90vh] w-[100vw]">
+        <div className="flex justify-between px-10 mt-5">
+          <p>AWOOF TASK</p>
+          <p>00:00:00</p>
+        </div>
         <div className="w-full text-white text-center">
-          <div className="flex justify-around mt-3">
+          <div className="flex justify-around mt-2">
             <div className="bg-blue-600 rounded-xl px-5 py-3 hover:translate-y-1 duration-150">
               <p>Discord</p>
             </div>
