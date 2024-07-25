@@ -12,7 +12,7 @@ const Navbar = () => {
       <a href="/earncash">
         <div className="flex flex-col items-center">
           <div className="scale-150">
-            <i class="bi bi-cash"></i>
+            <i className="bi bi-cash"></i>
           </div>
           Tasks
         </div>
