@@ -80,18 +80,17 @@ const Home = () => {
           </div>
         </div>
         <div className="text-center mt-10">
-          <p className="text-5xl text-blue-600 font-bold">TOTAL E4C COIN</p>
+          <p className="text-4xl text-blue-600 font-bold">TOTAL E4C COIN</p>
           <div className="flex justify-end">
-            <p className="text-3xl text-blue-600 font-bold">AVAILABLE COIN</p>
+            <p className="text-2xl text-blue-600 font-bold">AVAILABLE COIN</p>
           </div>
         </div>
         <Chart
           chartType="Bar"
           width="100%"
-          height="300px"
+          height="250px"
           data={data}
           options={options}
-          className="mt-24"
         />
       </div>
       <Navbar />
