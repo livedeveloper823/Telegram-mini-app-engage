@@ -10,6 +10,7 @@ const Home = () => {
   if (webapp && webapp["user"]) {
     setUsername(webapp["user"]);
   }
+  console.log(webapp, username);
   return (
     <div>
       <div className="h-[90vh] w-[100vw] max-w-3xl">
