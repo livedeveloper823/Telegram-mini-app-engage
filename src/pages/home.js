@@ -88,10 +88,10 @@ const Home = () => {
         <Chart
           chartType="Bar"
           width="100%"
-          height="400px"
+          height="300px"
           data={data}
           options={options}
-          className="mt-20"
+          className="mt-24"
         />
       </div>
       <Navbar />
