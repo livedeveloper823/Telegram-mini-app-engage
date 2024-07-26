@@ -9,15 +9,12 @@ const Home = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       const webapp = await window?.Telegram?.WebApp?.initDataUnsafe;
-
       if (webapp && webapp["user"]) {
-        setUsername(webapp["user"]["id"] || "Unknown User");
-        console.log("WebApp data:", webapp["user"]["id"], webapp["user"]["username"]);
+        setUsername(webapp["user"]["username"] || "Unknown User");
 
       } else {
         setUsername("Guest");
       }
-      console.log("Username:", username);
     };
     fetchUserData();
   }, []);
