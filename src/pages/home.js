@@ -91,6 +91,7 @@ const Home = () => {
           height="250px"
           data={data}
           options={options}
+          className="mt-10"
         />
       </div>
       <Navbar />
