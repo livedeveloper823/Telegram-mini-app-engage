@@ -4,20 +4,39 @@ import { useState } from "react";
 
 const Home = () => {
   const [open, setOpen] = useState(false);
+  const [username, setUsername] = useState("");
+  const webapp = window.Telegram?.WebApp.initDataUnsafe;
+
+  if (webapp && webapp["user"]) {
+    setUsername(webapp["user"]);
+  }
   return (
     <div>
-      <div className="h-[90vh] w-[100vw]">
+      <div className="h-[90vh] w-[100vw] max-w-3xl">
         <div className="flex justify-between px-10 mt-5">
-          <p>Name : Rank</p>
-          <div className="scale-125 relative inline-block" onClick={() => setOpen(!open)}>
+          <p>{`${username}`} : Rank</p>
+          <div
+            className="scale-125 relative inline-block"
+            onClick={() => setOpen(!open)}
+          >
             <i className="bi bi-gear-fill"></i>
           </div>
-          {open && 
-          <div className="absolute flex flex-col gap-3 right-5 top-12 z-[1] bg-blue-600 shadow-lg shadow-black text-white rounded-lg p-2">
-            <div className="hover:bg-blue-200 hover:text-blue-900 px-3 rounded-lg"><a href="/profile">Profile</a></div>
-            <div className="hover:bg-blue-200 hover:text-blue-900 px-3 rounded-lg"><a href="/faqs">FAQs</a></div>
-            <div className="hover:bg-blue-200 hover:text-blue-900 px-3 rounded-lg"><a href="/support">Get a Support</a></div>
-            </div>}
+          {open && (
+            <div className="absolute flex flex-col gap-3 right-5 top-12 z-[1] bg-blue-600 shadow-lg shadow-black text-white rounded-lg p-2">
+              <div className="hover:bg-blue-200 hover:text-blue-900 px-3 rounded-lg">
+                <a href="/languages">Languages</a>
+              </div>
+              <div className="hover:bg-blue-200 hover:text-blue-900 px-3 rounded-lg">
+                <a href="/profile">Profile</a>
+              </div>
+              <div className="hover:bg-blue-200 hover:text-blue-900 px-3 rounded-lg">
+                <a href="/faqs">FAQs</a>
+              </div>
+              <div className="hover:bg-blue-200 hover:text-blue-900 px-3 rounded-lg">
+                <a href="/support">Get a Support</a>
+              </div>
+            </div>
+          )}
         </div>
         <div className="w-full text-white text-center">
           <div className="flex justify-around mt-3">
@@ -43,7 +62,6 @@ const Home = () => {
           <div className="flex justify-end">
             <p className="text-3xl text-blue-600 font-bold">AVAILABLE COIN</p>
           </div>
-          {/* <button className="bg-blue-600 text-white text-xl fonr-bold px-4 py-2 rounded-lg">Start mining</button> */}
         </div>
       </div>
       <Navbar />

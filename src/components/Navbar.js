@@ -1,6 +1,6 @@
 const Navbar = () => {
   return (
-    <div className="flex justify-around w-full fixed bottom-2 py-3 rounded-t-3xl border-t-2 border-blue-400">
+    <div className="flex justify-around w-full fixed bottom-2 py-3 rounded-t-3xl border-t-2 border-blue-400 max-w-3xl">
       <a href="/shop">
         <div className="flex flex-col items-center">
           <div className="scale-150">
