@@ -1,21 +1,31 @@
 import Navbar from "../components/Navbar";
 import coin from "../assets/dollar.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Home = () => {
   const [open, setOpen] = useState(false);
-  const [username, setUsername] = useState("");
-  const webapp = window.Telegram?.WebApp.initDataUnsafe;
+  const [username, setUsername] = useState('');
 
-  if (webapp && webapp["user"]) {
-    setUsername(webapp["user"]);
-  }
-  console.log(webapp, username);
+  const fetchUserData = () => {
+    const webapp = window?.Telegram?.WebApp?.initDataUnsafe;
+
+    if (webapp && webapp.user) {
+      setUsername(webapp.user.username || 'Unknown User');
+    } else {
+      setUsername('Guest');
+    }
+    console.log('WebApp data:', webapp);
+    console.log('Username:', username);
+  };
+
+  useEffect(() => {
+    fetchUserData();
+  }, [fetchUserData]);
   return (
     <div>
       <div className="h-[90vh] w-[100vw] max-w-3xl">
         <div className="flex justify-between px-10 mt-5">
-          <p>{`${username}`} : Rank</p>
+          <p>{username} : Rank</p>
           <div
             className="scale-125 relative inline-block"
             onClick={() => setOpen(!open)}
