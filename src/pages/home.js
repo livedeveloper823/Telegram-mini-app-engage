@@ -6,11 +6,11 @@ const Home = () => {
   const [open, setOpen] = useState(false);
   const [username, setUsername] = useState('');
 
-  const fetchUserData = () => {
-    const webapp = window?.Telegram?.WebApp?.initDataUnsafe;
+  const fetchUserData = async () => {
+    const webapp = await window?.Telegram?.WebApp?.initDataUnsafe;
 
-    if (webapp && webapp.user) {
-      setUsername(webapp.user.username || 'Unknown User');
+    if (webapp && webapp["user"]) {
+      setUsername(webapp["user"] || 'Unknown User');
     } else {
       setUsername('Guest');
     }
