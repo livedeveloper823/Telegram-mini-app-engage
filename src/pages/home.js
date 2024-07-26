@@ -4,24 +4,22 @@ import { useEffect, useState } from "react";
 
 const Home = () => {
   const [open, setOpen] = useState(false);
-  const [username, setUsername] = useState('');
-
-  const fetchUserData = async () => {
-    const webapp = await window?.Telegram?.WebApp?.initDataUnsafe;
-
-    if (webapp && webapp["user"]) {
-      setUsername(webapp["user"] || 'Unknown User');
-
-    } else {
-      setUsername('Guest');
-    }
-    console.log('WebApp data:', webapp);
-    console.log('Username:', username);
-  };
+  const [username, setUsername] = useState("");
 
   useEffect(() => {
+    const fetchUserData = async () => {
+      const webapp = await window?.Telegram?.WebApp?.initDataUnsafe;
+
+      if (webapp && webapp["user"]) {
+        setUsername(webapp["user"]["id"] || "Unknown User");
+      } else {
+        setUsername("Guest");
+      }
+      console.log("WebApp data:", webapp["user"]["id"], webapp["user"]["username"]);
+      console.log("Username:", username);
+    };
     fetchUserData();
-  }, [fetchUserData]);
+  }, []);
   return (
     <div>
       <div className="h-[90vh] w-[100vw] max-w-3xl">
