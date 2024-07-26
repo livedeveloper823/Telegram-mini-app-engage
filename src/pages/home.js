@@ -11,6 +11,7 @@ const Home = () => {
 
     if (webapp && webapp["user"]) {
       setUsername(webapp["user"] || 'Unknown User');
+
     } else {
       setUsername('Guest');
     }
