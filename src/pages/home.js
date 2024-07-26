@@ -12,10 +12,11 @@ const Home = () => {
 
       if (webapp && webapp["user"]) {
         setUsername(webapp["user"]["id"] || "Unknown User");
+        console.log("WebApp data:", webapp["user"]["id"], webapp["user"]["username"]);
+
       } else {
         setUsername("Guest");
       }
-      console.log("WebApp data:", webapp["user"]["id"], webapp["user"]["username"]);
       console.log("Username:", username);
     };
     fetchUserData();
