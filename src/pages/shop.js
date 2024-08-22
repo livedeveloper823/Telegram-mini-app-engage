@@ -1,4 +1,3 @@
-import Navbar from "../components/Navbar";
 
 const Shop = () => {
   return (
@@ -6,7 +5,6 @@ const Shop = () => {
       <div className="h-[90vh] w-[100vw]">
         <div>This is the Shop Page.</div>
       </div>
-      <Navbar />
     </div>
   );
 };

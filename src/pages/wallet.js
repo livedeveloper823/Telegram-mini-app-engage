@@ -1,4 +1,3 @@
-import Navbar from "../components/Navbar";
 
 const Wallet = () => {
   return (
@@ -6,7 +5,6 @@ const Wallet = () => {
       <div className="h-[90vh] w-[100vw]">
         <div>This is the Wallet Page.</div>
       </div>
-      <Navbar />
     </div>
   );
 };
