@@ -57,7 +57,7 @@ const Home = () => {
   console.log("mouse scroll pos", isMouseScrolledToTop);
 
   return (
-    <div className="h-[90vh] w-full px-2 py-6 flex flex-col gap-2">
+    <div className="h-[90vh] w-full px-2 py-6 flex flex-col gap-2 max-w-3xl">
       <div className="h-10 flex flex-row justify-between">
         <p>{username} : Rank</p>
         <div
