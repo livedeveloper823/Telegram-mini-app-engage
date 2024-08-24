@@ -2,7 +2,7 @@
 const EarnCash = () => {
   return (
     <div>
-      <div className="h-[90vh] w-full px-2 py-6 flex flex-col gap-2 ">
+      <div className="h-[90vh] w-full px-2 py-6 flex flex-col gap-2 max-w-3xl">
         <div className="flex justify-between px-4 mt-5">
           <p>AWOOF TASK</p>
           <p>00:00:00</p>
