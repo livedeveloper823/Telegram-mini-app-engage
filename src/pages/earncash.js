@@ -7,7 +7,7 @@ const EarnCash = () => {
           <p>AWOOF TASK</p>
           <p>00:00:00</p>
         </div>
-        <div className="flex justify-between  mt-2 py-2 gap-2 overflow-scroll">
+        <div className="flex justify-between  mt-2 py-2 gap-2 overflow-scroll scrollbar-hide">
           <a href="https://discord.com" target="blank">
             <div className="bg-blue-600 rounded-xl px-5 py-3 hover:translate-y-1 duration-150 w-full">
               Discord
